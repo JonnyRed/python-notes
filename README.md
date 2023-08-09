@@ -174,3 +174,24 @@ For the values of `type`:
 '1f'
 
 ```
+
+## f-string
+
+```python
+>>> import math
+
+>>> name, age = "Alice", 30
+>>> f"My name is {name} and I am {age} years old."
+'My name is Alice and I am 30 years old.'
+
+
+>>> x, y = 5, 10
+>>> f"The sum of {x} and {y} is {x + y}."
+'The sum of 5 and 10 is 15.'
+
+
+>>> pi = 3.14159265
+>>> f"The value of pi is approximately {math.pi:.2f}."
+'The value of pi is approximately 3.14.'
+
+```
