@@ -195,3 +195,87 @@ For the values of `type`:
 'The value of pi is approximately 3.14.'
 
 ```
+# Delete names from space
+
+There are different ways to delete all declared variables in a j
+upyter python notebook, depending on your needs and preferences.
+Here are some possible methods:
+
+- You can use the magic command `%reset` to clear all variables from
+the interactive namespace¹. This will prompt you to confirm your
+action, unless you use the `-f` option to force it. For example:
+
+```
+%reset -f
+```
+
+- You can also use the `del` keyword to delete specific variables or
+objects from memory. For example:
+
+```python
+>>> var_a, var_b, var_c =  3, 4, 5
+>>> var_a, var_b, var_c
+(3, 4, 5)
+>>> 'var_a' in locals(), 'var_b' in locals(), 'var_c' in locals()
+(True, True, True)
+>>> 'var_a' in globals(), 'var_b' in globals(), 'var_c' in globals()
+(True, True, True)
+
+>>> del var_a, var_b, var_c
+>>> 'var_a' in locals(), 'var_b' in locals(), 'var_c' in locals()
+(False, False, False)
+>>> 'var_a' in globals(), 'var_b' in globals(), 'var_c' in globals()
+(False, False, False)
+
+```
+
+- Another option is to use the `globals()` or `locals()` functions to
+get a dictionary of global or local variables, and then iterate
+over them to delete them. For example:
+
+```
+for var in list(globals().keys()):
+    if var[0] != '_': # avoid deleting built-in variables
+        del globals()[var]
+```
+
+- If you want to delete all variables that are defined after a certain
+cell, you can try to store a backup of the variables before that cell
+using the `copy` module, and then restore them later. You can also use
+the `dir()` function to get a list of the names of the variables in the
+current scope, and compare it with the backup list to delete the
+new ones². For example:
+
+```
+# Store original values
+from copy import deepcopy
+bckp_a = deepcopy(var_a)
+bckp_b = deepcopy(var_b)
+dir_bckp = deepcopy(dir()) # store defined variables at this point
+
+# Do your stuff
+var_a = some_func(var_a)
+var_b = some_other_func(var_a)
+var_c = some_value
+
+# Restore original values
+var_a = deepcopy(bckp_a)
+var_b = deepcopy(bckp_b)
+
+# Delete newly created variables
+for var in dir():
+    if var == 'dir_bckp': # preserve dir_bckp
+        continue
+    elif var not in dir_bckp: # delete new variables
+        del globals()[var]
+```
+
+Source: Conversation with Bing, 17/08/2023
+(1) python - Viewing all defined variables -
+Stack Overflow. https://stackoverflow.com/questions/633127/viewing-all-defined-variables.
+
+(2) python - jupyter delete all variables after cell - Stack Overflow.
+https://stackoverflow.com/questions/45927797/jupyter-delete-all-variables-after-cell.
+
+(3) Data Analysis and Visualization with pandas and Jupyter Notebook in
+.... https://www.digitalocean.com/community/tutorials/data-analysis-and-visualization-with-pandas-and-jupyter-notebook-in-python-3.
