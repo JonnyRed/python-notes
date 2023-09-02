@@ -14,9 +14,19 @@ Whenever possible, I extracted the Python console listings in this book
 from doctest to ensure accuracy. When the output was too long, the
 elided part is marked by an ellipsis (...)
 
-doctest: +ELLIPSIS directive to make the doctest pass:
+* `doctest: +[ELLIPSIS]` directive to make the doctest pass,
+used in exceptions see [ELLIPSIS][doctest ellipsis]
 
+* `doctest: +SKIP` directive to make the doctest pass. Used as
+documentation aid see [SKIP][docktest skip]
 
+# Licenses
+
+[choosealicense.com][Choose a License] is a good resource
+
+# gitignore
+
+The python gitignore file is from [python gitignore][git python ignore]
 
 # format strings
 
@@ -279,3 +289,28 @@ https://stackoverflow.com/questions/45927797/jupyter-delete-all-variables-after-
 
 (3) Data Analysis and Visualization with pandas and Jupyter Notebook in
 .... https://www.digitalocean.com/community/tutorials/data-analysis-and-visualization-with-pandas-and-jupyter-notebook-in-python-3.
+
+# Modules
+
+## Module search path
+
+* Current Directory
+* `PYTHONPATH` environment variable
+* Installation-dependent list
+
+```python
+>>> import sys
+>>> sys.path   # doctest: +SKIP
+```
+
+
+```python
+>>> import doctest
+>>> doctest.__file__ # doctest: +SKIP
+'/usr/lib/python3.8/sys.py'
+```
+
+[doctest ellipsis]: https://docs.python.org/3/library/doctest.html#option-ELLIPSIS
+[docktest skip]: https://docs.python.org/3/library/doctest.html#option-SKIP
+[Choose a License]: https://choosealicense.com/
+[git python ignore]: https://github.com/github/gitignore/blob/main/Python.gitignore
