@@ -303,7 +303,6 @@ https://stackoverflow.com/questions/45927797/jupyter-delete-all-variables-after-
 >>> sys.path   # doctest: +SKIP
 ```
 
-
 ```python
 >>> import doctest
 >>> doctest.__file__ # doctest: +SKIP
