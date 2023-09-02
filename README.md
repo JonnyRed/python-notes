@@ -1,5 +1,20 @@
 # Python notes
 
+This README contains some notes on how to use Python for various tasks,
+such as:
+
+* Testing code with doctest, a module that allows you to write tests
+as part of the documentation.
+* Choosing a license for your project, with a link to a resource that
+helps you compare different options.
+* Creating a gitignore file, with a link to a template for Python
+projects.
+* Formatting strings with the .format() method, which lets you insert
+and format values in strings.
+* The README also includes some examples of code and output, using
+the Python console and doctest. Some parts of the output are skipped
+or elided for brevity, using doctest directives.
+
 # Doctest
 
 To test the code in this README run the following python script
