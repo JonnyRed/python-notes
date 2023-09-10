@@ -1,5 +1,20 @@
 # Python notes
 
+This README contains some notes on how to use Python for various tasks,
+such as:
+
+* Testing code with doctest, a module that allows you to write tests
+as part of the documentation.
+* Choosing a license for your project, with a link to a resource that
+helps you compare different options.
+* Creating a gitignore file, with a link to a template for Python
+projects.
+* Formatting strings with the .format() method, which lets you insert
+and format values in strings.
+* The README also includes some examples of code and output, using
+the Python console and doctest. Some parts of the output are skipped
+or elided for brevity, using doctest directives.
+
 # Doctest
 
 To test the code in this README run the following python script
@@ -14,9 +29,19 @@ Whenever possible, I extracted the Python console listings in this book
 from doctest to ensure accuracy. When the output was too long, the
 elided part is marked by an ellipsis (...)
 
-doctest: +ELLIPSIS directive to make the doctest pass:
+* `doctest: +[ELLIPSIS]` directive to make the doctest pass,
+used in exceptions see [ELLIPSIS][doctest ellipsis]
 
+* `doctest: +SKIP` directive to make the doctest pass. Used as
+documentation aid see [SKIP][docktest skip]
 
+# Licenses
+
+[choosealicense.com][Choose a License] is a good resource
+
+# gitignore
+
+The python gitignore file is from [python gitignore][git python ignore]
 
 # format strings
 
