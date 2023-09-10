@@ -279,3 +279,67 @@ https://stackoverflow.com/questions/45927797/jupyter-delete-all-variables-after-
 
 (3) Data Analysis and Visualization with pandas and Jupyter Notebook in
 .... https://www.digitalocean.com/community/tutorials/data-analysis-and-visualization-with-pandas-and-jupyter-notebook-in-python-3.
+
+# Modules
+
+## Module search path
+
+* Current Directory
+* `PYTHONPATH` environment variable
+* Installation-dependent list
+
+```python
+>>> import sys
+>>> sys.path   # doctest: +SKIP
+```
+
+```python
+>>> import doctest
+>>> doctest.__file__ # doctest: +SKIP
+'/usr/lib/python3.8/sys.py'
+```
+
+# Distutils
+
+Python's [Distutils][] is a **mechanism to distribute Python packages
+and extensions** that is provided in the Python standard library.
+It provides support for building and installing additional modules
+into a Python installation, which may be either pure Python,
+or extension modules written in C, or collections of Python packages
+that include both. It also provides a command-line interface that
+allows you to query the metadata fields of a project, create source
+and binary distributions, and register your project with the
+Python Package Index.
+
+Distutils is a tool for packaging and distributing Python modules that
+can be installed by other users.
+
+## Setup.py
+
+In Python, `setup.py` is a file that is used to [setup, build and distribute][]
+Python packages. It typically contains information about the package,
+such as its name, version, and dependencies, as well as instructions
+for building and installing the package. The `setup.py` file is the
+centre of all activity in using the Distutils, a set of tools for
+packaging and distributing Python modules. The `setup.py` file can be
+executed by using various commands, such as:
+
+```bash
+python setup.py build # to build the package
+python setup.py install # to install the package
+python setup.py sdist # to create a source distribution
+python setup.py bdist # to create a binary distribution
+```
+
+The `setup.py` file is Python's answer to a multi-platform installer
+and make file. It allows you to create and distribute Python packages
+that can be installed by other users.
+
+[setup, build and distribute]: https://docs.python.org/3/distutils/setupscript.html#writing-the-setup-script
+
+[Distutils]: https://docs.python.org/3/distutils/introduction.html#an-introduction-to-distutils
+
+[doctest ellipsis]: https://docs.python.org/3/library/doctest.html#option-ELLIPSIS
+[docktest skip]: https://docs.python.org/3/library/doctest.html#option-SKIP
+[Choose a License]: https://choosealicense.com/
+[git python ignore]: https://github.com/github/gitignore/blob/main/Python.gitignore
