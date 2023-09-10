@@ -316,8 +316,7 @@ can be installed by other users.
 
 ## Setup.py
 
-In Python, `setup.py` is a file that is used to
-[setup, build and distribute][]
+In Python, `setup.py` is a file that is used to [setup, build and distribute][]
 Python packages. It typically contains information about the package,
 such as its name, version, and dependencies, as well as instructions
 for building and installing the package. The `setup.py` file is the
@@ -337,6 +336,7 @@ and make file. It allows you to create and distribute Python packages
 that can be installed by other users.
 
 [setup, build and distribute]: https://docs.python.org/3/distutils/setupscript.html#writing-the-setup-script
+
 [Distutils]: https://docs.python.org/3/distutils/introduction.html#an-introduction-to-distutils
 
 [doctest ellipsis]: https://docs.python.org/3/library/doctest.html#option-ELLIPSIS
