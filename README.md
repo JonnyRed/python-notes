@@ -325,6 +325,9 @@ https://stackoverflow.com/questions/45927797/jupyter-delete-all-variables-after-
 ```
 
 [doctest ellipsis]: https://docs.python.org/3/library/doctest.html#option-ELLIPSIS
+
 [docktest skip]: https://docs.python.org/3/library/doctest.html#option-SKIP
+
 [Choose a License]: https://choosealicense.com/
+
 [git python ignore]: https://github.com/github/gitignore/blob/main/Python.gitignore
