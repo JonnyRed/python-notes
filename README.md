@@ -15,7 +15,7 @@ and format values in strings.
 the Python console and doctest. Some parts of the output are skipped
 or elided for brevity, using doctest directives.
 
-# Doctest
+## Doctest
 
 To test the code in this README run the following python script
 
@@ -35,15 +35,15 @@ used in exceptions see [ELLIPSIS][doctest ellipsis]
 * `doctest: +SKIP` directive to make the doctest pass. Used as
 documentation aid see [SKIP][docktest skip]
 
-# Licenses
+## Licenses
 
 [choosealicense.com][Choose a License] is a good resource
 
-# gitignore
+## gitignore
 
 The python gitignore file is from [python gitignore][git python ignore]
 
-# format strings
+## format strings
 
 Sure. The Python string `.format()` method is a powerful tool for
 formatting strings. It can be used to insert variables, expressions,
@@ -51,11 +51,12 @@ and other values into strings, and it can also be used to control
 the formatting of the output.
 
 The .format() method takes two types of arguments:
+
 * Positional arguments
-    * are inserted into the template string in the order that they are
+  * are inserted into the template string in the order that they are
     specified
 * Keyword arguments
-    * are inserted into the template string by name.
+  * are inserted into the template string by name.
 
 * The replacement fields in the template string are enclosed in curly
 braces ({})
@@ -63,6 +64,7 @@ braces ({})
 directly from the template to the output.
 
 The `.format()` method supports a variety of formatting options, such as:
+
 * Aligning text to the left, right, or center of the output.
 * Specifying the width and precision of numbers.
 * Using different formatting styles for different types of data.
@@ -85,7 +87,7 @@ __Inserting variables:__
 
 ```
 
-__Inserting expressions__
+### Inserting expressions
 
 ```python
 >>> age = 30
@@ -118,6 +120,7 @@ __Inserting expressions__
 | `format_spec` |Specifies more detail about how the value should be converted|
 
 For `conversion` the following are useful conversions
+
 * !s str()
 * !r repr()
 * !a ascii()
@@ -138,32 +141,31 @@ For `format_spec` the following
 
 |Indicator|Effect|
 |------------|------|
-| : |	Separates the <format_spec> from the rest of the replacement field|
-|`fill`|	Specifies how to pad values that don’t occupy the entire field width|
-|`align`|	Specifies how to justify values that don’t occupy the entire field width|
-|`sign`|	Controls whether a leading sign is included for numeric values|
-| #	|Selects an alternate output form for certain presentation types|
-|0|	Causes values to be padded on the left with zeros instead of ASCII space characters|
-|`width`|	Specifies the minimum width of the output|
-|`group`|	Specifies a grouping character for numeric output|
-|`.prec`|	Specifies the number of digits after the decimal point for floating-point presentation types, and the maximum output width for string presentations types|
-|`type`|	Specifies the presentation type, which is the type of conversion performed on the corresponding argument|
-
+| : | Separates the <format_spec> from the rest of the replacement field|
+|`fill`| Specifies how to pad values that don’t occupy the entire field width|
+|`align`| Specifies how to justify values that don’t occupy the entire field width|
+|`sign`| Controls whether a leading sign is included for numeric values|
+| # |Selects an alternate output form for certain presentation types|
+|0| Causes values to be padded on the left with zeros instead of ASCII space characters|
+|`width`| Specifies the minimum width of the output|
+|`group`| Specifies a grouping character for numeric output|
+|`.prec`| Specifies the number of digits after the decimal point for floating-point presentation types, and the maximum output width for string presentations types|
+|`type`| Specifies the presentation type, which is the type of conversion performed on the corresponding argument|
 
 For the values of `type`:
 
-|Type indicator	|Presentation Type|
-|-------|-----------------|
-|b|	Binary integer|
-|c|	Single character|
-|d|	Decimal integer|
-|e or E	| Exponential|
-|f or F	| Floating point|
-|g or G	| Floating point or Exponential|
-|o|	Octal integer|
-|s|	String|
-|x or X|	Hexadecimal integer|
-|%|	Percentage|
+| Type indicator | Presentation Type             |
+|----------------|-------------------------------|
+| b              | Binary integer                |
+| c              | Single character              |
+| d              | Decimal integer               |
+| e or E         | Exponential                   |
+| f or F         | Floating point                |
+| g or G         | Floating point or Exponential |
+| o              | Octal integer                 |
+| s              | String                        |
+| x or X         | Hexadecimal integer           |
+| %              | Percentage                    |
 
 ```Python
 
@@ -220,21 +222,22 @@ For the values of `type`:
 'The value of pi is approximately 3.14.'
 
 ```
-# Delete names from space
+
+## Delete names from space
 
 There are different ways to delete all declared variables in a j
 upyter python notebook, depending on your needs and preferences.
 Here are some possible methods:
 
-- You can use the magic command `%reset` to clear all variables from
+* You can use the magic command `%reset` to clear all variables from
 the interactive namespace¹. This will prompt you to confirm your
 action, unless you use the `-f` option to force it. For example:
 
-```
+```python
 %reset -f
 ```
 
-- You can also use the `del` keyword to delete specific variables or
+* You can also use the `del` keyword to delete specific variables or
 objects from memory. For example:
 
 ```python
@@ -254,7 +257,7 @@ objects from memory. For example:
 
 ```
 
-- Another option is to use the `globals()` or `locals()` functions to
+* Another option is to use the `globals()` or `locals()` functions to
 get a dictionary of global or local variables, and then iterate
 over them to delete them. For example:
 
@@ -264,7 +267,7 @@ for var in list(globals().keys()):
         del globals()[var]
 ```
 
-- If you want to delete all variables that are defined after a certain
+* If you want to delete all variables that are defined after a certain
 cell, you can try to store a backup of the variables before that cell
 using the `copy` module, and then restore them later. You can also use
 the `dir()` function to get a list of the names of the variables in the
@@ -297,17 +300,17 @@ for var in dir():
 
 Source: Conversation with Bing, 17/08/2023
 (1) python - Viewing all defined variables -
-Stack Overflow. https://stackoverflow.com/questions/633127/viewing-all-defined-variables.
+Stack Overflow. <https://stackoverflow.com/questions/633127/viewing-all-defined-variables>.
 
 (2) python - jupyter delete all variables after cell - Stack Overflow.
-https://stackoverflow.com/questions/45927797/jupyter-delete-all-variables-after-cell.
+<https://stackoverflow.com/questions/45927797/jupyter-delete-all-variables-after-cell>.
 
 (3) Data Analysis and Visualization with pandas and Jupyter Notebook in
-.... https://www.digitalocean.com/community/tutorials/data-analysis-and-visualization-with-pandas-and-jupyter-notebook-in-python-3.
+.... <https://www.digitalocean.com/community/tutorials/data-analysis-and-visualization-with-pandas-and-jupyter-notebook-in-python-3>.
 
-# Modules
+## Modules
 
-## Module search path
+### Module search path
 
 * Current Directory
 * `PYTHONPATH` environment variable
@@ -324,10 +327,10 @@ https://stackoverflow.com/questions/45927797/jupyter-delete-all-variables-after-
 '/usr/lib/python3.8/sys.py'
 ```
 
-# Distutils
+## Distutils
 
-Python's [Distutils][] is a **mechanism to distribute Python packages
-and extensions** that is provided in the Python standard library.
+Python's [Distutils][] is a __mechanism to distribute Python packages
+and extensions__ that is provided in the Python standard library.
 It provides support for building and installing additional modules
 into a Python installation, which may be either pure Python,
 or extension modules written in C, or collections of Python packages
@@ -368,3 +371,44 @@ that can be installed by other users.
 [docktest skip]: https://docs.python.org/3/library/doctest.html#option-SKIP
 [Choose a License]: https://choosealicense.com/
 [git python ignore]: https://github.com/github/gitignore/blob/main/Python.gitignore
+
+## Local Python modules
+
+ How to install local python modules in a conda virtual environment.
+ This [note][BoAnote] is based on [Bits of Analytics][] very nice introduction
+ to "Using pip with conda for local development projects".
+
+ The summary in the [note][BoAnote] is perfect:
+
+1. Create your conda environment and make sure you install pip using conda
+1. Activate your conda environment
+1. _When pip installing a local Python project
+(either in “editable mode” or not) you need to make sure that you are
+using the pip that is part of your conda env and NOT the pip that’s
+in your base conda env nor the pip that is in your system Python_.
+1. While supposedly running pip from a conda env should use the pip
+installed in that env, it is not necessarily true.
+1. To ensure you run the correct pip, include the path to the pip
+executable inside your conda env.
+1. To make this easier you can create an alias or shell function to call
+the correct pip without typing a long path.
+1. _Ideally, avoid doing additional conda installs into this env after
+doing any pip installs. If needed, better to recreate the env, include
+the new conda installs, and then redo the pip installs_.
+
+[Advice][condapip] on the combined use of `conda` and `pip`
+
+[BoAnote]:https://bitsofanalytics.org/posts/pip-conda-local-dev/pip_conda_local_dev.html
+
+[Bits of Analytics]:https://bitsofanalytics.org/
+
+[condapip]:https://www.anaconda.com/blog/using-pip-in-a-conda-environment
+
+### Create Sympy environment
+
+1. Create a `sympy`environment called `sympyutils` and make sure `pep`
+is included. The `environment.yml` is in the current directory.
+
+```cmd
+conda env create -f "D:\Users\John\Documents\notes\python\environment.yml"  
+```
